@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, XCircle, Minus } from "lucide-react";
+import { CheckCircle2, XCircle, Minus, AlertTriangle } from "lucide-react";
+import { cn } from "@/shared/lib/utils";
 
 interface ComplianceStatusBadgeProps {
   status: 'compliant' | 'non-compliant' | 'surplus' | 'deficit' | 'neutral';
@@ -10,42 +11,49 @@ export function ComplianceStatusBadge({ status, className }: ComplianceStatusBad
   const config = {
     compliant: {
       label: 'Compliant',
-      variant: 'default' as const,
       icon: CheckCircle2,
-      className: 'bg-success text-success-foreground hover:bg-success/90',
+      className: 'bg-green-100 text-green-800 border-green-200 hover:bg-green-200',
+      iconClassName: 'text-green-600',
     },
     'non-compliant': {
       label: 'Non-Compliant',
-      variant: 'destructive' as const,
       icon: XCircle,
-      className: '',
+      className: 'bg-red-100 text-red-800 border-red-200 hover:bg-red-200',
+      iconClassName: 'text-red-600',
     },
     surplus: {
       label: 'Surplus',
-      variant: 'default' as const,
       icon: CheckCircle2,
-      className: 'bg-success text-success-foreground hover:bg-success/90',
+      className: 'bg-emerald-100 text-emerald-800 border-emerald-200 hover:bg-emerald-200',
+      iconClassName: 'text-emerald-600',
     },
     deficit: {
       label: 'Deficit',
-      variant: 'destructive' as const,
-      icon: XCircle,
-      className: '',
+      icon: AlertTriangle,
+      className: 'bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200',
+      iconClassName: 'text-orange-600',
     },
     neutral: {
       label: 'Neutral',
-      variant: 'secondary' as const,
       icon: Minus,
-      className: '',
+      className: 'bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200',
+      iconClassName: 'text-gray-600',
     },
   };
 
-  const { label, variant, icon: Icon, className: statusClassName } = config[status];
+  const { label, icon: Icon, className: statusClassName, iconClassName } = config[status];
 
   return (
-    <Badge variant={variant} className={`${statusClassName} ${className}`}>
-      <Icon className="h-3 w-3 mr-1" />
-      {label}
+    <Badge 
+      variant="outline" 
+      className={cn(
+        "border-2 font-semibold px-3 py-1 flex items-center gap-1.5 transition-colors",
+        statusClassName,
+        className
+      )}
+    >
+      <Icon className={cn("h-3.5 w-3.5", iconClassName)} />
+      <span>{label}</span>
     </Badge>
   );
 }
