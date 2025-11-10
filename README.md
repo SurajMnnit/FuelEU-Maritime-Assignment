@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Varuna Marine Services - Fuel EU Maritime Compliance Management System
 
 <div align="center">
