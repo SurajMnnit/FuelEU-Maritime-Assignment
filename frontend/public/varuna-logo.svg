@@ -1,0 +1,26 @@
+<svg width="280" height="100" viewBox="0 0 280 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Light teal background -->
+  <rect width="280" height="100" fill="#7FD3C1"/>
+  
+  <!-- Ship icon (white) - head-on perspective -->
+  <g transform="translate(140, 30)">
+    <!-- Ship hull/bow (front view) -->
+    <path d="M -20 12 L -18 18 L 18 18 L 20 12 L 18 8 L -18 8 Z" fill="white"/>
+    <!-- Ship superstructure layers (bridge/deck levels) -->
+    <rect x="-12" y="4" width="8" height="6" fill="white"/>
+    <rect x="-4" y="1" width="8" height="9" fill="white"/>
+    <rect x="4" y="4" width="8" height="6" fill="white"/>
+  </g>
+  
+  <!-- Waves (three wavy lines below ship) -->
+  <path d="M 90 48 Q 115 43, 140 48 T 190 48" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 90 53 Q 115 48, 140 53 T 190 53" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 90 58 Q 115 53, 140 58 T 190 58" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Company name -->
+  <text x="140" y="75" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2C3E50" text-anchor="middle">Varuna Marine Services</text>
+  
+  <!-- Tagline -->
+  <text x="140" y="92" font-family="Arial, sans-serif" font-size="9" fill="#2C3E50" text-anchor="middle" letter-spacing="1.5">SMART SUSTAINABLE SHIPPING</text>
+</svg>
+
