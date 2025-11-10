@@ -8,64 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Varuna Marine Services Theme - Light/White Theme */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    /* Modern Blue-Purple Gradient Theme */
+    --background: 240 20% 98%;
+    --foreground: 240 10% 15%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 240 10% 15%;
 
-    --primary: 0 0% 10%;
+    --primary: 262 83% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 240 15% 92%;
+    --secondary-foreground: 240 10% 15%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 240 10% 95%;
+    --muted-foreground: 240 5% 50%;
 
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 65% 45%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --success: 145 60% 38%;
+    --success: 142 76% 36%;
     --success-foreground: 0 0% 100%;
 
-    --warning: 35 85% 50%;
+    --warning: 38 92% 50%;
     --warning-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 10%;
+    --border: 240 15% 85%;
+    --input: 240 15% 92%;
+    --ring: 262 83% 58%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
     
-    --chart-1: 0 0% 10%;
-    --chart-2: 0 0% 45%;
-    --chart-3: 145 60% 38%;
-    --chart-4: 35 85% 50%;
-    --chart-5: 0 65% 45%;
+    --chart-1: 262 83% 58%;
+    --chart-2: 217 91% 60%;
+    --chart-3: 142 76% 36%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 0 84% 60%;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 0 0% 10%;
-
-    --sidebar-primary: 0 0% 10%;
-
+    --sidebar-background: 240 25% 12%;
+    --sidebar-foreground: 240 10% 98%;
+    --sidebar-primary: 262 83% 58%;
     --sidebar-primary-foreground: 0 0% 100%;
-
-    --sidebar-accent: 0 0% 96%;
-
-    --sidebar-accent-foreground: 0 0% 10%;
-
-    --sidebar-border: 0 0% 90%;
-
-    --sidebar-ring: 0 0% 10%;
+    --sidebar-accent: 240 20% 20%;
+    --sidebar-accent-foreground: 240 10% 98%;
+    --sidebar-border: 240 20% 25%;
+    --sidebar-ring: 262 83% 58%;
   }
 }
 
@@ -75,6 +68,21 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 text-foreground;
+    background-attachment: fixed;
   }
+}
+
+/* Custom gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, hsl(262, 83%, 58%), hsl(217, 91%, 60%));
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(240, 10%, 98%));
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.gradient-header {
+  background: linear-gradient(135deg, hsl(240, 25%, 12%), hsl(262, 30%, 20%));
 }
