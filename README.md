@@ -6,7 +6,7 @@
 
 **Smart Sustainable Shipping**
 
-A comprehensive full-stack application for managing Fuel EU Maritime compliance, including route management, compliance tracking, banking operations, and Article 21 pooling functionality.
+A comprehensive full-stack application for managing Fuel EU Maritime compliance, featuring a modern UI with sidebar navigation, route management, compliance tracking, banking operations, and Article 21 pooling functionality.
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3+-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.3+-61DAFB.svg)](https://reactjs.org/)
@@ -205,9 +205,10 @@ frontend/
 │   │   │   └── HttpPoolRepository.ts
 │   │   └── ui/                        # React UI Components
 │   │       ├── components/            # Reusable Components
-│   │       │   ├── Layout.tsx
-│   │       │   ├── DataTable.tsx
-│   │       │   ├── StatCard.tsx
+│   │       │   ├── Layout.tsx         # Sidebar navigation layout
+│   │       │   ├── DataTable.tsx      # Enhanced data table
+│   │       │   ├── StatCard.tsx       # Statistics card component
+│   │       │   ├── FilterBar.tsx      # Advanced filter component
 │   │       │   └── ComplianceStatusBadge.tsx
 │   │       └── pages/                 # Page Components
 │   │           ├── RoutesPage.tsx
@@ -219,8 +220,9 @@ frontend/
 │       ├── hooks/                     # Custom React Hooks
 │       ├── lib/                       # Utility Libraries
 │       └── utils/                     # Helper Functions
-└── public/
-    └── varuna-logo.svg                # Company Logo
+├── public/
+│   └── varuna-logo.svg                # Company Logo
+└── index.css                          # Global styles with gradient theme
 ```
 
 ---
@@ -629,37 +631,50 @@ GET /api/pools/:id
 
 ## 🎨 Frontend Features
 
+### Modern UI Design
+- **Sidebar Navigation**: Collapsible dark sidebar with smooth transitions and active state indicators
+- **Gradient Theme**: Modern blue-purple gradient color scheme throughout the application
+- **Responsive Layout**: Optimized for all screen sizes with adaptive layouts
+- **Interactive Components**: Enhanced buttons, cards, and badges with hover effects and transitions
+- **Statistics Dashboard**: Real-time KPI cards with visual indicators and progress bars
+- **Improved UX**: Better spacing, typography, and visual hierarchy for enhanced user experience
+
 ### Routes Page
-- **Filtering**: Filter routes by vessel type, fuel type, and year
-- **Data Table**: Sortable and searchable route data
-- **Baseline Management**: Set and view baseline routes
-- **Statistics**: Display route metrics and totals
+- **Statistics Cards**: Overview cards showing total routes, compliance rates, average intensity, and non-compliant routes
+- **Advanced Filtering**: Collapsible filter panel with active filter badges and individual clear options
+- **Sidebar Actions**: Quick actions panel and compliance summary in right sidebar
+- **Baseline Banner**: Prominent baseline route indicator with gradient background and visual highlighting
+- **Enhanced Data Table**: Improved table styling with icons, status badges, and action buttons
+- **Filter Management**: Individual filter clearing and bulk reset functionality
 
 ### Compare Page
-- **Comparison View**: Side-by-side baseline vs current comparison
-- **Visual Charts**: Bar charts for GHG intensity visualization
-- **Compliance Status**: Color-coded compliance badges
-- **Percent Differences**: Calculate and display changes
+- **Comparison View**: Side-by-side baseline vs current comparison with visual indicators
+- **Visual Charts**: Interactive bar charts for GHG intensity visualization
+- **Compliance Status**: Color-coded compliance badges with icons for quick recognition
+- **Percent Differences**: Calculate and display changes with trend indicators (up/down arrows)
+- **KPI Dashboard**: Key performance indicators displayed prominently
 
 ### Ship CB Page
-- **Search Functionality**: Search for specific ships
-- **Year Filtering**: View compliance data by year
-- **Compute CB**: Calculate compliance balance for ships
-- **Data Visualization**: Display CB values with proper formatting
+- **Search Functionality**: Search for specific ships with instant filtering
+- **Year Filtering**: View compliance data by year with easy year selection
+- **Compute CB**: Calculate compliance balance for ships with detailed results
+- **Data Visualization**: Display CB values with proper formatting and color coding
+- **Compliance Status**: Visual status indicators (surplus/deficit) for each ship
 
 ### Banking Page
-- **Current CB Display**: Show current compliance balance
-- **Bank Operations**: Bank surplus for future use
-- **Apply Operations**: Apply banked surplus to deficits
-- **Transaction History**: View banking operations
+- **Current CB Display**: Show current compliance balance with visual cards
+- **Bank Operations**: Bank surplus for future use with validation
+- **Apply Operations**: Apply banked surplus to deficits with real-time updates
+- **Transaction History**: View banking operations with detailed information
+- **Visual Cards**: Enhanced card design with gradient accents and icons
 
 ### Pooling Page
-- **Ship Selection**: Select ships for pool creation
-- **Pool Types**: Strategic pooling and fleet compliance management
-- **Article 21 Validation**: Real-time validation of pool rules
-- **Before/After Display**: Visual representation of CB changes
-- **Pool History**: View all created pools with member details
-- **Warning System**: Visual warnings for rule violations
+- **Ship Selection**: Select ships for pool creation with visual indicators
+- **Pool Types**: Strategic pooling and fleet compliance management options
+- **Article 21 Validation**: Real-time validation of pool rules with clear error messages
+- **Before/After Display**: Visual representation of CB changes with comparison views
+- **Pool History**: View all created pools with detailed member information
+- **Warning System**: Visual warnings for rule violations with helpful guidance
 
 ---
 
@@ -823,9 +838,19 @@ This project is licensed under the ISC License.
 
 ---
 
+## 📚 Documentation
+
+This project includes comprehensive documentation:
+
+- **README.md**: Complete project documentation with setup instructions
+- **REFLECTION.md**: Reflection on AI-assisted development process
+- **AGENT_WORKFLOW.md**: Detailed AI agent usage and workflow documentation
+
+---
+
 ## 📞 Support
 
-For support, please contact **12shyam02gupta@gmail.com** or open an issue in the repository.
+For support, please open an issue in the repository.
 
 ---
 
@@ -839,7 +864,7 @@ For support, please contact **12shyam02gupta@gmail.com** or open an issue in the
 
 <div align="center">
 
-**Built with ❤️ by Shyam Gupta**
+**Built with modern technologies and best practices**
 
 *Smart Sustainable Shipping*
 
